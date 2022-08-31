@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="white" />
+    <link rel="apple-touch-icon" href="images/pwa-icon-256.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+
+    <link rel="icon" href="images/pwa-icon-256.png" />
+    <title>IMC-PWA</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>IMC-PWA</h1>
+      </header>
+      <main class="main">
+        <div class="input">
+          <label for="peso">Peso</label>
+          <input
+            type="text"
+            id="peso"
+            placeholder="Peso (Kg)"
+            name="peso"
+            autocomplete="on"
+          />
+        </div>
+        <div class="input">
+          <label for="altura">Altura</label>
+          <input
+            type="text"
+            id="altura"
+            placeholder="Altura (m)"
+            name="altura"
+            autocomplete="on"
+          />
+        </div>
+        <button onclick="calculatorImc()">Confirmar</button>
+        <div id="result"></div>
+      </main>
+      <footer class="footer">
+        <p>
+          Todos os direitos autorais reservados a Gabriel dos Santos Oliveira
+        </p>
+      </footer>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
