@@ -21,7 +21,6 @@
   align-items: center;
   justify-content: space-evenly;
   background-color: #bdc4a7;
-  gap: 30px;
 }
 .header {
   grid-area: header;
@@ -35,6 +34,12 @@
   flex-direction: column;
 }
 .input input {
+  width: 80vw;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.input select {
   width: 80vw;
   padding: 10px;
   border: 1px solid #ccc;

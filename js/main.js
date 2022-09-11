@@ -7,6 +7,9 @@ window.onload = () => {
 function calculatorImc() {
   const peso = document.getElementById("peso").value;
   const altura = document.getElementById("altura").value;
+  const idade = document.getElementById("idade").value;
+  const nome = document.getElementById("nome").value;
+  const sexo = document.getElementById("sexo").value;
   const result = Math.round(peso / (altura * altura));
   let categoria;
   if (result < 18.5) {
@@ -23,6 +26,6 @@ function calculatorImc() {
   } else {
     categoria = "Obesidade classe 3"
   }
-  document.getElementById('result').innerHTML = "<div>Sua categoria é: " + categoria + '</div>O seu peso é ' + result;
+  document.getElementById('result').innerHTML = "<div>Sua categoria é: " + categoria + '</div><div>O seu imc é: ' + result + "</div><div>Sua idade é: " + idade + "</div><div>Seu nome é: " + nome + "</div>Seu sexo é: " + sexo;
 
 }
