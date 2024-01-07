@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "serve": "^14.0.1"
+  "devDependencies": {
+    "serve": "^14.2.1"
   }
 }
