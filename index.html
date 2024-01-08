@@ -1,80 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <meta name="theme-color" content="white" />
     <link rel="apple-touch-icon" href="images/pwa-icon-256.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="manifest" href="manifest.json" />
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/button.css" />
+    <link rel="stylesheet" href="css/form.css" />
 
     <link rel="icon" href="images/pwa-icon-256.png" />
-    <title>IMC-PWA</title>
+    <title>Calculadora de IMC</title>
   </head>
   <body>
     <div class="container">
       <header class="header">
-        <h1>IMC-PWA</h1>
+        <h1 class="heading">Calculadora de IMC</h1>
       </header>
       <main class="main">
-        <div class="input">
-          <label for="nome">Nome</label>
-          <input
-            type="text"
-            id="nome"
-            placeholder="Nome"
-            name="nome"
-            autocomplete="on"
-          />
-        </div>
-
-        <div class="input">
-          <label for="idade">Idade</label>
-          <input
-            type="text"
-            id="idade"
-            placeholder="idade"
-            name="idade"
-            autocomplete="on"
-          />
-        </div>
-        <div class="input">
-          <label for="sexo">Sexo</label>
-          <select id="sexo">
-            <option value="Masculino">Masculino</option>
-            <option value="Feminino">Feminino</option>
-          </select>
-        </div>
-        <div class="input">
-          <label for="peso">Peso</label>
-          <input
-            type="text"
-            id="peso"
-            placeholder="Peso (Kg)"
-            name="peso"
-            autocomplete="on"
-          />
-        </div>
-        <div class="input">
-          <label for="altura">Altura</label>
-          <input
-            type="text"
-            id="altura"
-            placeholder="Altura (m)"
-            name="altura"
-            autocomplete="on"
-          />
-        </div>
-        <button onclick="calculatorImc()">Confirmar</button>
-        <div id="result"></div>
+        <form id="container_form" class="container_form">
+          <div class="container_input">
+            <label for="weight_input">Peso em Kg</label>
+            <input
+              class="input"
+              type="text"
+              id="weight_input"
+              placeholder="Informe seu peso"
+              required
+            />
+            <span id="weight_input_message_error" class="error_message"> </span>
+          </div>
+          <div class="container_input">
+            <label for="height_input">Altura em metros</label>
+            <input
+              class="input"
+              type="text"
+              id="height_input"
+              placeholder="Informe sua altura"
+              required
+            />
+            <span id="height_input_message_error" class="error_message"> </span>
+          </div>
+          <button class="primary_button" onclick="calculatorImc()">
+            Calcular
+          </button>
+        </form>
+        <dialog class="modal" id="modal_result">
+          <header class="modal_header">
+            <button onclick="closeModal()" class="close_button">
+              <img class="close_icon" src="./images/close_icon.svg" />
+            </button>
+          </header>
+          <main class="container_modal_content" id="result">
+            <h1 class="modal_imc_heading">Avaliação</h1>
+            <h2 id="modal_imc_category" class="imc_heading"></h2>
+            <span id="modal_imc_body_index" class="imc_span"> </span>
+          </main>
+        </dialog>
       </main>
       <footer class="footer">
-        <p>
-          Todos os direitos autorais reservados a Gabriel dos Santos Oliveira
-        </p>
+        <p>Desenvolvido por Gabriel dos Santos Oliveira</p>
       </footer>
     </div>
-    <script src="./js/main.js"></script>
+    <script src="./js/service_worker.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/calculate_imc.js"></script>
+    <script src="./js/form.js"></script>
   </body>
 </html>

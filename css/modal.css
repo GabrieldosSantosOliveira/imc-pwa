@@ -1,0 +1,35 @@
+.modal::backdrop {
+  backdrop-filter: blur(10px);
+  transition: all 1s ease;
+}
+.modal {
+  transition: all 1s ease;
+  border: none;
+  border-radius: 1rem;
+  height: 18.75rem;
+  width: 32rem;
+}
+
+.modal_header {
+  display: flex;
+  justify-content: end;
+}
+.container_modal_content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.modal_imc_heading {
+  text-align: center;
+  font-size: 1.25rem;
+}
+.imc_heading {
+  font-size: 1rem;
+  font-family: var(--font-family-main);
+  font-weight: 400;
+}
+.imc_span {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: var(--font-family-main);
+}

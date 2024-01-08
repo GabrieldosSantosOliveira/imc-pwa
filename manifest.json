@@ -1,6 +1,6 @@
 {
-  "name": "IMC-PWA",
-  "short_name": "IMC",
+  "name": "Calculadora de Índice de Massa Corpórea",
+  "short_name": "Calculadora de IMC",
   "icons": [
     {
       "src": "./images/pwa-icon-256.png",
