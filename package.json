@@ -1,14 +1,12 @@
 {
   "name": "imc_pwa",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
   "scripts": {
-    "dev": "serve ."
+    "dev": "serve index.html"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Gabriel dos Santos Oliveira <gabrielsantosoliveira951@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "serve": "^14.2.1"
   }
